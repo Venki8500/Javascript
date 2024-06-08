@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <style>
+            #d1{
+                width: 250px;
+                height: 250px;
+                display:inline-block;
+                
+            }
+            #d2{
+                width: 250px;
+                height: 250px;
+                display:inline-block;
+                
+            }
+            #d3{
+                width: 250px;
+                height: 250px;
+                display:inline-block;
+                
+            }
+            #d4{
+                width: 400px;
+                height: 400px;
+                border: 1px solid;
+               
+            }
+
+        </style>
+    </head>
+    <body>
+        <center>
+ 
+      <div>
+        <img id="d1"  onclick="img1(event)" src="https://c4.wallpaperflare.com/wallpaper/546/883/642/faded-audi-wallpaper-preview.jpg" alt="">
+        <img id="d2" onclick="img1(event)" src="https://content2.kawasaki.com/ContentStorage/CKM/Products/5372/66e70613-c28c-4828-a896-5d570f78ac4a.jpg?w=640" alt="">
+        <img id="d3" onclick="img1(event)" src="https://c4.wallpaperflare.com/wallpaper/32/633/88/motorcycle-stunts-pulsar-220-wallpaper-preview.jpg" alt="">
+      </div>  
+       
+        <div ><img id="d4" src="" alt=""></div>
+    </center>
+
+        
+        
+    <script>
+        function img1(ev){
+            var a= document.getElementById("d4");
+            a.src=ev.target.src
+        }
+              
+        
+
+    </script>
+    </body>
+</html>

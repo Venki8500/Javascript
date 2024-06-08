@@ -1,0 +1,23 @@
+<html>
+
+<head></head>
+
+<body >
+    <div id="d1" > </div>
+    
+    <script>
+        var pic = ["https://storage.kawasaki.eu/public/kawasaki.eu/en-EU/model/17ZX1000Y_US_GY3_Styling01_C.jpg", "https://images.playground.com/896e82b239ff4de4b85ea7e393db244a.jpeg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAXcZVVnX6k3uDOzEz67_Z7zSrO5J0a0QkvA&s"]
+        pic.forEach(function(a){
+          var imgg=document.createElement("img");
+          imgg.src=a;
+           d1.style.display="inline-block";
+           imgg.style.width="300px";
+           imgg.style.padding="10px";
+        //    imgg.style.border="1px solid";
+          document.getElementById("d1").appendChild(imgg);  
+        })
+
+    </script>
+</body>
+
+</html>

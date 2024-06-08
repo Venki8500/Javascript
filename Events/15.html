@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <style>
+            #d1{
+               background-color: orange
+            }
+
+        </style>
+    </head>
+    <body>
+        <center>
+        <input type="text" id="d3">
+        <button id="d1" onclick="sai()">Add Student</button>
+        
+
+
+        <ul id="d2">   </ul>
+        
+    </center>
+           
+        <script>
+        
+            
+                var s=document.getElementById("d3");
+               var q= document.getElementById("d2");
+               var ar=[];
+               function sai(){
+                document.getElementById("d2").innerHTML="";
+                ar.push(s.value);
+                
+               
+               ar.forEach(function(a){
+                var nli=document.createElement("li");
+                nli.innerHTML=a;
+                q.appendChild(nli);
+
+               })
+            }
+
+        </script>
+    </body>
+</html>

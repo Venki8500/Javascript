@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <style>
+          #d7{
+            font-size: xx-large;
+
+            }
+    </style>
+    </head>
+  
+    <body>
+        <center>
+        <i id="d2" onclick="fill(1)" class="bi bi-star"></i>
+        <i id="d3" onclick="fill(2)" class="bi bi-star"></i>
+        <i id="d4" onclick="fill(3)" class="bi bi-star"></i>
+        <i id="d5" onclick="fill(4)" class="bi bi-star"></i>
+        <i id="d6" onclick="fill(5)" class="bi bi-star"></i>
+        <h1>Rating:
+            <br>
+        <span id="d7"></span>/5
+    </h1>
+    </center>
+        <script>
+            function fill(rating){
+     var x= document.querySelectorAll("i")
+                x.forEach(function(a){
+                    a.className="bi bi-star"
+                })
+                for(var i=0;i<=rating-1;i++){
+                    x[i].className="bi bi-star-fill";
+                }
+
+           
+                document.getElementById("d7").innerHTML=i;
+            }
+           
+        
+
+        </script>
+    </body>
+</html>

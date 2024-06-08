@@ -1,0 +1,14 @@
+<html>
+    <head></head>
+    <body>
+        <ul id="m1"></ul>
+        <script>
+            var s=[10,20,30,40,50,60,90,80,90];
+            s.forEach(function(a){
+                var nli=document.createElement("li");
+                nli.innerHTML=a;
+                document.getElementById("m1").appendChild(nli)
+            })
+        </script>
+    </body>
+</html>

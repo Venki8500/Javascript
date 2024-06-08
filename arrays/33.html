@@ -1,0 +1,15 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var ar=[5000,10000,15000,20000];
+            var HRA=0.4;
+            var DA=0.92;
+            var TAX=0.1;
+            for(var i=0;i<=ar.length-1;i++){
+                ar[i]=ar[i]+(ar[i]*HRA)+(ar[i]*DA)-(ar[i]*TAX);
+                console.log(ar[i]);
+            }
+        </script>
+    </body>
+</html>

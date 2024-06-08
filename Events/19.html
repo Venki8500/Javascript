@@ -1,0 +1,138 @@
+<html>
+
+<head>
+    <style>
+        #d5 {
+            color: red;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #d6 {
+            background-color: orange;
+        }
+
+         
+    </style>
+</head>
+
+<body>
+    <center>
+        <form onsubmit="showdata(event)">
+          
+            <h1 id="d5">Add Contact Cards</h1>
+            <br>
+             Name:<input type="text" id="d1" onkeyup="uptdnm(event)">
+            <br>
+            <br>
+            Number:<input type="number" id="d2" onkeyup="numbr(event)">
+            <br>
+            <br>
+            Email: <input type="email" id="d3" onkeyup="emil(event)">
+            <br>
+            <br>
+            Enter Image URL: <input type="url" id="d4" onkeyup="image1(event)">
+            <br>
+            <br>
+            <button id="d6" type="submit" onclick="gendata(event)">Add Contact</button>
+            <br>
+            <br>
+            <div id="d7">
+                
+            </div>
+        </form>
+    </center>
+
+    <script>
+        var students=[];
+
+        var name='';
+        var number='';
+        var email='';
+        var image='';
+        function uptdnm(ev){
+            name=ev.target.value;
+        }
+       function numbr(ev){
+            number=ev.target.value;
+        }
+       function emil(ev){
+            email=ev.target.value;
+        }
+      function image1(ev){ 
+            image=ev.target.value;
+        }
+
+        function showdata(ev) {
+            ev.preventDefault();
+
+           
+
+            var std={
+                name:name,
+                number:number,
+                email:email,
+                image:image
+            }
+            students.push(std);
+            console.log(students);
+          
+                 
+     
+            gendata()
+        
+        }  
+           function gendata(){
+
+            document.getElementById("d7").innerHTML="";
+             
+            students.forEach(function(a){  
+           
+            
+
+        var ndiv=document.createElement("div");       
+        ndiv.style.width="200px";
+        ndiv.style.height="125px";
+        ndiv.style.border="1px solid";
+        ndiv.style.paddingRight="38px";
+        ndiv.style.backgroundColor="yellow";
+        ndiv.style.color="red";
+        
+
+        var nul=document.createElement("ul");
+      
+        ndiv.appendChild(nul);
+
+        var nimg=document.createElement("img");
+        nimg.src=a.image;
+        nimg.style.width="70px";
+        nimg.style.height="40px";
+        nimg.style.borderRadius="10px";
+        nul.appendChild(nimg)
+
+        var nam=document.createElement("li");
+        nam.innerHTML=a.name;
+        nam.style.listStyle="none";
+        nul.appendChild(nam);
+
+        var nnum=document.createElement("li");
+        nnum.innerHTML=a.number;
+        nnum.style.listStyle="none";
+        nul.appendChild(nnum);
+
+        var nemil=document.createElement("li");
+        nemil.innerHTML=a.email;
+        nemil.style.listStyle="none";
+        nul.appendChild(nemil);
+
+           document.getElementById("d7").appendChild(ndiv);
+          })
+        }
+   
+      
+
+
+
+    </script>
+</body>
+
+</html>

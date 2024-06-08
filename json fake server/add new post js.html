@@ -1,0 +1,36 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+       <form onsubmit="addnewpost(event)">
+        <input type="text" name="title" id="venki">
+        <br>
+        <input type="text" name="author" id="lovely">
+        <br>
+        <button>Add post</button>
+        </form>
+        <script>
+
+            function addnewpost(ev){
+                ev.preventDefault();
+                var newsfeed={
+                    title:document.getElementById("venki").value,
+                    author:document.getElementById("lovely").value,
+
+
+                }
+               fetch("http://localhost:3000/posts", {
+                method:"POST",
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                body:JSON.stringify(newsfeed)
+
+               })
+            }
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,97 @@
+<html>
+
+<head></head>
+<table  border="2">
+<thead>
+    <th>firstname</th>
+    <th>lastname</th>
+    <th>age</th>
+    <th>gender</th>
+    <th>city</th>
+    <th>salary</th>
+</thead>
+<tbody id="d1"></tbody>
+</table>
+
+<body>
+
+
+    <script>
+        var people = [
+            {
+                "firstname": "praveen",
+                "lastname": "gubbala",
+                "age": 36,
+                "gender": "male",
+                "city": "hyd",
+                "salary": 10000
+            },
+            {
+                "firstname": "srikanth",
+                "lastname": "gubbala",
+                "age": 32,
+                "gender": "male",
+                "city": "bengaluru",
+                "salary": 20000
+            },
+            {
+                "firstname": "pradeep",
+                "lastname": "reddy",
+                "age": 21,
+                "gender": "male",
+                "city": "hyd",
+                "salary": 30000
+            },
+            {
+                "firstname": "mounika",
+                "lastname": "mudiraj",
+                "age": 20,
+                "gender": "female",
+                "city": "nalgonda",
+                "salary": 30000
+            },
+            {
+                "firstname": "nikhil",
+                "lastname": "m",
+                "age": 22,
+                "gender": "male",
+                "city": "guntur",
+                "salary": 2000
+            },
+            {
+                "firstname": "riya",
+                "lastname": "bhadouria",
+                "age": 14,
+                "gender": "female",
+                "city": "indore",
+                "salary": 40000
+            }
+        ];
+        people.forEach(function(a){
+            var ntr=document.createElement("tr");
+            var ftd=document.createElement("td");
+            ftd.innerHTML=a.firstname;
+            document.getElementById("d1").appendChild(ftd);
+            var ltd=document.createElement("td");
+            ltd.innerHTML=a.lastname;
+            document.getElementById("d1").appendChild(ltd);
+            var atd=document.createElement("td");
+            atd.innerHTML=a.age;
+            document.getElementById("d1").appendChild(atd);
+            var gtd=document.createElement("td");
+            gtd.innerHTML=a.gender;
+            document.getElementById("d1").appendChild(gtd);
+            var ctd=document.createElement("td");
+            ctd.innerHTML=a.city;
+            document.getElementById("d1").appendChild(ctd);
+            var std=document.createElement("td");
+            std.innerHTML=a.salary;
+            document.getElementById("d1").appendChild(std);
+            document.getElementById("d1").appendChild(ntr);
+        })
+
+
+    </script>
+</body>
+
+</html>

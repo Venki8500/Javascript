@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <style>
+           
+            #d2{
+                width:70px;
+                height:40px;
+                font-size: medium;
+                border-radius: 20px;
+                background-color: yellow;
+              
+            }
+            #d3{
+                width:300px;
+                height:300px;
+                display:none;
+               
+            }
+            #d4{
+                width:300px;
+                height:300px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <center>
+      
+        <img id="d3" src="https://charatoon.com/photo/thum/1439.png" alt="">
+         <img id="d4" src="https://st2.depositphotos.com/4308409/6462/v/450/depositphotos_64629805-stock-illustration-cartoon-sad-light-buld.jpg" alt="">
+      
+        <br>
+        <button id="d2" onclick="rohit()">On</button>
+        </center>
+        
+
+        <script>
+       
+
+        function rohit(){
+           if(document.getElementById("d2").style.backgroundColor===""){
+             document.getElementById("d2").style.backgroundColor="yellow";
+            d2.innerHTML="Off";
+            document.getElementById("d3").style.display="block";
+            document.getElementById("d4").style.display="none";
+           }
+           else{
+             document.getElementById("d2").style.backgroundColor="";
+            d2.innerHTML="On";
+            document.getElementById("d4").style.display="block";
+            document.getElementById("d3").style.display="none";
+           }
+        }
+
+
+
+
+        </script>
+    </body>
+</html>

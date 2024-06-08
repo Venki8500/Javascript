@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <style>
+        #d1 {
+            width: 90px;
+            height: 60px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: green;
+            font-size: medium;
+        }
+
+        #d2 {
+            width: 90px;
+            height: 60px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: red;
+            font-size: medium;
+
+        }
+    span{
+        font-size:20px;
+    }
+    </style>
+</head>
+
+<body>
+    <center>
+        <button onclick="play()" id="d1" >Like</button> : <span id="h" ></span>
+        <br>
+        <br>
+        <button onclick="game()" id="d2">Dislike</button> : <span id="j"></span>
+    </center>
+
+    <script>
+       var ct=0;
+        function play() {
+          
+            document.getElementById("h").innerHTML = ct;
+            ct++;
+        }
+        var count=0;
+        function game() {
+            
+            document.getElementById("j").innerHTML = count;
+            count++;
+        }
+
+
+
+    </script>
+</body>
+
+</html>

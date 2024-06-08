@@ -1,0 +1,41 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            function strong(a){
+            var a=145;
+          
+           
+            var rem;
+            var result=0;
+            var temp=a;
+            // fact=fact*i;
+            while(a>0){
+                rem=a%10;
+                var fact=1;
+                a=parseInt(a/10);
+                
+                for(var i=rem;i>=1;i--){
+                    fact=fact*i;
+                }
+                
+                result=result+fact;
+
+            }
+    //    console.log(result);
+    //    if(result==temp){
+    //     console.log(result+":is a strong number");
+    //    }
+    //    else{
+    //     console.log(result+": is not a strong number");
+    //    }
+    return result
+    }
+    var mani= strong(145);
+    console.log(mani);
+       
+            
+
+        </script>
+    </body>
+</html>

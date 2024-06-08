@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <style>
+            #d1{
+                width:300px;
+                height:300px;
+                border: 1px solid;
+            }
+            #d2{
+                width:100px;
+                height: 45px;
+                font-size: medium;
+                background-color: orange;
+            }
+
+        </style>
+    </head>
+    <body>
+        <center>
+        <div id="d1" ></div>
+        <br>
+        <button id="d2" onclick="venki()" >Toggle</button>
+        </center>
+        <script>
+            function venki(){
+                if(document.getElementById("d1").style.backgroundColor==""){
+                document.getElementById("d1").style.backgroundColor="yellow";
+                }
+                else{
+                    document.getElementById("d1").style.backgroundColor="";
+                }
+
+
+                // d2.style.backgroundColor="orange";
+            }
+
+        </script>
+    </body>
+</html>

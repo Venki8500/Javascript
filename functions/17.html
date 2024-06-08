@@ -1,0 +1,32 @@
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        function armstrong(a) {
+         
+                var rem;
+                var sum=0;
+                var temp=a;
+                while (a > 0) {
+                    rem=a%10;
+                    sum=sum+rem**3;            
+                 a=parseInt(a/10);
+
+            }
+            if(sum==temp){
+                console.log(sum+": is a armstrong");
+            }
+            else{
+                console.log(sum +": is not a armstrong");
+            }
+            return sum
+        }
+         var result= armstrong(153);
+         console.log(result);
+
+    </script>
+</body>
+
+</html>

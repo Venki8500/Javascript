@@ -1,0 +1,161 @@
+<html>
+
+<head>
+  
+</head>
+
+<body>
+   
+    <table id="d1" border="2" >
+        <thead>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+            <th>Gender</th> 
+            <th>City</th>
+            <th>Salary</th>
+        </thead>
+    </table>
+    <br>
+    <table id="d2" border="2" >
+        <thead >
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+            <th>Gender</th> 
+            <th>City</th>
+            <th>Salary</th>
+        </thead>
+    </table>
+        
+
+    </table>
+ 
+    <script>
+        var people = [
+            {
+                "firstname": "praveen",
+                "lastname": "gubbala",
+                "age": 36,
+                "gender": "male",
+                "city": "hyd",
+                "salary": 10000
+            },
+            {
+                "firstname": "srikanth",
+                "lastname": "gubbala",
+                "age": 32,
+                "gender": "male",
+                "city": "bengaluru",
+                "salary": 20000
+            },
+            {
+                "firstname": "pradeep",
+                "lastname": "reddy",
+                "age": 21,
+                "gender": "male",
+                "city": "hyd",
+                "salary": 30000
+            },
+            {
+                "firstname": "mounika",
+                "lastname": "mudiraj",
+                "age": 20,
+                "gender": "female",
+                "city": "nalgonda",
+                "salary": 30000
+            },
+            {
+                "firstname": "nikhil",
+                "lastname": "m",
+                "age": 22,
+                "gender": "male",
+                "city": "guntur",
+                "salary": 2000
+            },
+            {
+                "firstname": "riya",
+                "lastname": "bhadouria",
+                "age": 14,
+                "gender": "female",
+                "city": "indore",
+                "salary": 40000
+            }
+        ];
+       people.forEach(function(a){
+        var ntr=document.createElement("tr");
+
+        var ftd=document.createElement("td");
+        ftd.innerHTML=a.firstname;
+         ntr.appendChild(ftd);
+
+        var ltd=document.createElement("td");
+        ltd.innerHTML=a.lastname;
+        ntr.appendChild(ltd);
+
+        var atd=document.createElement("td");
+        atd.innerHTML=a.age;
+        ntr.appendChild(atd);
+
+       var gtd=document.createElement("td")
+        gtd.innerHTML=a.gender;
+          if(a.gender=="male"){
+            ntr.appendChild(gtd);
+      
+        var ctd=document.createElement("td");
+        ctd.innerHTML=a.city;
+      ntr.appendChild(ctd);
+
+
+        var std=document.createElement("td");
+        std.innerHTML=a.salary;
+        ntr.appendChild(std);
+
+
+        document.getElementById("d1").appendChild(ntr);
+ 
+
+          }
+
+        })
+
+        people.forEach(function(a){
+        var ntr=document.createElement("tr");
+
+        var ftd=document.createElement("td");
+        ftd.innerHTML=a.firstname;
+         ntr.appendChild(ftd);
+
+        var ltd=document.createElement("td");
+        ltd.innerHTML=a.lastname;
+        ntr.appendChild(ltd);
+
+        var atd=document.createElement("td");
+        atd.innerHTML=a.age;
+        ntr.appendChild(atd);
+
+       var gtd=document.createElement("td")
+        gtd.innerHTML=a.gender;
+          if(a.gender=="female"){
+            ntr.appendChild(gtd);
+      
+        var ctd=document.createElement("td");
+        ctd.innerHTML=a.city;
+      ntr.appendChild(ctd);
+
+        var std=document.createElement("td");
+        std.innerHTML=a.salary;
+        ntr.appendChild(std);
+
+
+        document.getElementById("d2").appendChild(ntr);
+       
+
+          }
+
+        })
+
+    </script>
+</body>
+
+</html>

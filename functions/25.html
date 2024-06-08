@@ -1,0 +1,89 @@
+<html>
+
+<head></head>
+
+<body>
+    <script>
+            var sum = 0;
+            var fact= 1;
+
+        function number(a) {
+            var count = 0;
+            for (var i = 0; i <= a; i++) {
+                if (a % i == 0) {
+                    count = count + 1;
+                }
+            }
+            if (count === 2) {
+                console.log(a + ":is a prime number");
+            }
+            else {
+                console.log(a + ":not a prime number");
+            }
+
+
+            var rem;
+            var x=a;
+            var sum=0;
+            var count=0;
+           
+            var tot=0;
+           
+            while(a){
+                rem=a%10;
+                sum=sum*10+rem;
+                a=parseInt(a/10);
+                count=count+1;
+
+             
+            }
+            while(sum){
+                rem=sum%10;
+                tot=tot+rem**count;
+                sum=parseInt(sum/10)
+            }
+            if(x == tot ){
+            console.log(tot+": is a armstrong number");
+        }
+        else{
+                console.log(tot+": is not a armstrong number")
+        }
+
+
+
+            
+            for (let i = 1; i < a; i++) {
+                if (a % i == 0) {
+                    sum = sum + i;
+                    //   console.log(i);
+                
+
+                }
+            }
+            if (sum == a) {
+                console.log(sum + ": is a perfect number");
+
+            }
+            else {
+
+                console.log(sum + ": is not a perfect number");
+
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+        number("9")
+    </script>
+</body>
+
+</html>

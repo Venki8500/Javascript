@@ -1,0 +1,46 @@
+<html>
+    <head></head>
+    <body>
+
+        <input type="checkbox" name="tech" onchange="add(event)" value="html">:HTML
+        <input type="checkbox" name="tech" onchange="add(event)" value="css" >:CSS
+        <input type="checkbox" name="tech" onchange="add(event)" value="Javascript">:Javascript
+        <input type="checkbox" name="tech" onchange="add(event)" value="ReactJS">:ReactJS
+        <input type="checkbox" name="tech" onchange="add(event)" value="NodeJS">:NodeJS
+
+        <h1>Selected Technologies:<span></span></h1>
+        <ul id="d1">
+
+        </ul>
+        <script>
+            var selectedtechnologies=[];
+            function add(ev){
+                var t=ev.target.value;
+                document.getElementById("d1").innerHTML="";
+                if(ev.target.checked===true){
+                    selectedtechnologies.push(t);
+                }
+                else{
+                    selectedtechnologies=selectedtechnologies.filter(function(a){
+                        if(t===a){
+                            return false
+                        }
+                        else{
+                            return true
+                        }
+                    })
+                }
+                selectedtechnologies.forEach(function(tv){
+                    
+                    var tli=document.createElement("li");
+                    tli.innerHTML=tv;
+                    document.getElementById("d1").appendChild(tli)
+                })
+
+                
+
+            }
+
+        </script>
+    </body>
+</html>

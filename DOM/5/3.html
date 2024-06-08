@@ -1,0 +1,17 @@
+<html>
+    <head></head>
+    <body>
+        <ul id="d1"></ul>
+        
+        <script>
+            var students=["ramesh","suresh","praveen","gopi","sunil"];
+           
+            students.forEach(function(a){
+                var nli=document.createElement("li");
+                nli.innerHTML=a;
+                document.getElementById("d1").appendChild(nli)
+            })
+
+        </script>
+    </body>
+</html>

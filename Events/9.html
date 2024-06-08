@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <style>
+            #d1{
+                width:200px;
+                height:200px;
+                border:1px solid;
+
+            }
+
+        </style>
+    </head>
+    <body>
+        <center>
+        <div id="d1" onclick="venki()"></div>
+        <br>
+        <button id="d2" onclick="arjit()">ON</button>
+        <button id="d3" onclick="hi()">OFF</button>
+        </center>
+        <script>
+            function arjit(){
+                document.getElementById("d1").style.backgroundColor="yellow"
+                document.getElementById("d2").style.backgroundColor="red"
+                document.getElementById("d3").style.backgroundColor=""
+            }
+
+            function hi(){
+                document.getElementById("d1").style.backgroundColor=""
+                document.getElementById("d2").style.backgroundColor=""
+                document.getElementById("d3").style.backgroundColor="red"
+            }
+   
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <center>
+        Date Of Birth:<input type="date" onclick="timestamp(eve)" id="d1">
+       <h1> Your Age is:<span></span></h1>
+       </center>
+        <script>
+            function timestamp(ev){
+                var x=document.getElementById("d1").value;
+                ev.target.value=x;
+                 x=new Date();
+             console.log(x.getTime());
+            }
+            var y=new Date();
+            console.log(y.getTime());
+           
+            
+
+        </script>
+    </body>
+</html>

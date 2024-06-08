@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <style></style>
+    </head>
+    <body>
+        <center>
+            <form onsubmit="data(event)">
+        Firstname:<input type="text" onkeyup="hi(event)" id="d1">
+        <br>
+        Lastname:<input type="text" onkeyup="hello(event)" id="d2">
+        <br>
+        Date Of Birth:<input type="date" onclick="how(event)" id="d3">
+        <br>
+        Gender:
+        <input type="radio" name="gender" value="male" onchange="gen(event)" >:Male
+        <input type="radio" name="gender" value="female" onchange="gen(event)">:Female
+        <input type="radio" name="gender" value="others" onchange="gen(event)">:Others
+        <br>
+        Technologies:
+        <input type="checkbox" name="tech" onchange="add(event)" >HTML
+        <input type="checkbox" name="tech" onchange="add(event)">CSS
+        <input type="checkbox" name="tech" onchange="add(event)">Javascript
+        <input type="checkbox" name="tech" onchange="add(event)">ReactJS
+        <input type="checkbox" name="tech" onchange="add(event)">NodeJS
+        <br>
+        Country:
+        <select onchange="sel(event)">
+            <option value="null" disabled selected>please select your country</option>
+            <option>India</option>
+            <option>Pakistan</option>
+            <option>Bangladesh</option>
+            <option>Srilanka</option>
+        
+        </select>
+        <br>
+        Comments:
+        <textarea onkeyup="text(event)"></textarea>
+        <br>
+        <button type="submit">Save</button>
+    </center>
+</form>
+<table>
+
+</table>
+  <script>
+ var venki=[]
+     var fullname='';
+     var lastname='';
+     var dateofbirth='';
+     var gender=''
+     var Technologies='';
+     var country='';
+     var comments='';
+
+     var sltd=[]
+    function hi(ev){
+       fullname=ev.target.value;
+     }
+    function hello(ev){
+        lastname=ev.target.value;
+    }
+    function how(ev){
+        dob=ev.target.value;
+    }
+    function gen(ev){
+        gender=ev.target.value;
+    }
+    function add(ev){
+      
+        var v=ev.target.value;
+        if(ev.target.checked===true){
+            sltd.push(v)
+        }
+        else{
+            sltd=sltd.filter(function(a){
+                if(v==a){
+                    return false
+                }
+                else{
+                    return true
+                }
+            })
+            
+        }
+        sltd.forEach(function(b){
+            
+        })
+       
+
+    }
+    function sel(ev){
+        country=ev.target.value;
+    }
+    function text(ev){
+        comments=ev.target.value;
+    }
+
+function data(ev){
+    ev.preventDefault();
+
+    var std={
+        fullname:fullname,
+        lastname:lastname,
+        dateob:dateofbirth,
+        gender:gender,
+        Technologies:sltd,
+        country:country,
+        comments:comments
+    }
+    venki.push(std);
+    console.log(std);
+
+
+
+
+}
+
+  </script>
+    </body>
+</html>

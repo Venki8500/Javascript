@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <style>
+        #d1 {
+            color: brown
+        }
+
+        #d2 {
+            background-color: orange;
+            border: none;
+            height: 20px;
+            border: 1px solid;
+        }
+        /* #d3{
+            width: 150px;
+            height :100px;
+            border: 1px solid; */
+        /* } */
+
+        
+    </style>
+</head>
+
+<body>
+    <center>
+        <h3 >Enter Image URL: <input type="text box" id="d1" ></h3>
+        <button onclick="showimage(event)" id="d2">Add Image</button>
+        <br>
+        <br>
+        <br>
+        <div id="d3"></div>
+    </center>
+    <script>
+        var ar=[];
+        function showimage(){
+            
+            document.getElementById("d3").innerHTML="";
+
+            var s=document.getElementById("d1");
+            ar.push(s.value);
+            venki()
+        }
+             function venki(){
+            ar.forEach(function(a){
+            var nimg=document.createElement("img");
+            nimg.src=a
+            document.getElementById("d3").appendChild(nimg);
+            })
+         
+
+             }
+      
+      
+        
+
+
+    </script>
+</body>
+
+</html>

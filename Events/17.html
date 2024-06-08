@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <style>
+        #d2 {
+            background-color: orange;
+        }
+
+        #d3 {
+            background-color: orange;
+        }
+
+        #d1 {
+            width: 250px;
+            height: 150px;
+            border: 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg" alt="" id="d1">
+        <br>
+        <br>
+        <button id="d2"
+            onclick="dec()">Prev</button>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+        <button id="d3" onclick="inc()">Next</button>
+    </center>
+    <script>
+        var ar = ["https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736881_640.jpg",
+            "https://www.shutterstock.com/image-photo/mountains-under-mist-morning-amazing-260nw-1725825019.jpg",
+            "https://st2.depositphotos.com/1141099/6198/i/450/depositphotos_61983329-stock-photo-historic-charminar.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlJ2u482NBtw501OOICaZxGrIcxNtG5SuqWQ&s.jpg",
+            "https://c8.alamy.com/comp/2T01182/chapter-xlix-despair-illustrator-vogel-illustration-from-le-dernier-jour-dun-condamn-the-last-day-of-a-condemned-man-written-in-1829-and-part-of-a-set-of-engravings-published-in-victor-hugos-oeuvres-preceded-by-napoleon-le-petit-and-followed-by-claude-gueux-book-published-in-french-by-eugne-hugues-in-1879-2T01182.jpg"]
+
+        var i = 0;
+        function inc(ev) {
+      
+            var x = document.getElementById("d1");
+            x.src = ar[i++]
+            if (i == ar.length) {
+                i = 0;
+            }
+        }
+       
+        function dec(ev) {
+            var y = document.getElementById("d1");
+          
+            if (i == 0) {
+                i = ar.length - 1
+            }
+            y.src = ar[--i];
+        }
+
+
+    </script>
+</body>
+
+</html>

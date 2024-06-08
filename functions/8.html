@@ -1,0 +1,19 @@
+<html>
+    <head></head>
+    <body>
+    <script>
+        function digit(a){
+            var rem;
+            var sum=0;
+            while(a>0){
+                rem=a%10;
+                sum=sum+1;
+                a=parseInt(a/10);
+            }
+            return sum
+        }
+        var result=digit(123456);
+        console.log(result);
+    </script>
+    </body>
+</html>
