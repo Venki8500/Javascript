@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        #d2 {
+            background-color: #004792;
+            width: 60px;
+            height: 30px;
+            font-size: 0.9rem;
+            border:none;
+            border-radius: 5px;
+            color: white;
+            box-shadow: 1.5px 1.5px 1.5px 1.5px rgb(92, 90, 90)
+        }
+
+        #d3 {
+            background-color: #004792;
+            width: 60px;
+            height: 30px;
+            font-size: 0.9rem;
+            border:none;
+            border-radius: 5px;
+            color: white;
+            box-shadow: 1.5px 1.5px 1.5px 1.5px rgb(92, 90, 90)
+        }
+
+        #d1 {
+            width: 600px;
+            height: 400px;
+            box-shadow: 3px 3px 3px 3px rgb(124, 123, 123);
+            border-radius: 5px;
+        }
+     
+    </style>
+</head>
+
+<body style="background-color: rgb(232, 246, 248);">
+    <center style="margin-top: 5%;">
+        <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg" alt="" id="d1">
+        <br>
+        <br>
+      
+            <button id="d2"
+            onclick="dec()" style="margin-top: 2%;"><i class="bi bi-chevron-double-left"></i> </button>
+            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+        <button id="d3" onclick="inc()"><i class="bi bi-chevron-double-right"></i></button>
+       
+     
+    </center>
+    <script>
+        var ar = ["https://preview.redd.it/4k-wallpaper-sports-cars-on-track-v0-d00pbbx929sa1.jpg?width=3840&format=pjpg&auto=webp&s=74a8c4b4b056d1e1b30af8f1a4e584bc71c91ec0",
+      "https://i.redd.it/4k-wallpaper-sports-cars-on-track-v0-9ujw5dx929sa1.jpg?width=3840&format=pjpg&auto=webp&s=6da227a49a303421979ac42f8f9b23d04a44997a",
+        "https://i.etsystatic.com/40485572/r/il/b4c1fa/4596986979/il_fullxfull.4596986979_oowp.jpg",
+       "https://images.hdqwalls.com/download/classical-car-drift-mode-4k-o9-1360x768.jpg"]
+
+        var i = 0;
+        function inc(ev) {
+      
+            var x = document.getElementById("d1");
+            x.src = ar[i++]
+            if (i == ar.length) {
+                i = 0;
+            }
+        }
+       
+        function dec(ev) {
+            var y = document.getElementById("d1");
+          
+            if (i == 0) {
+                i = ar.length - 1
+            }
+            y.src = ar[--i];
+        }
+
+
+    </script>
+</body>
+
+</html>
